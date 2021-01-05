@@ -218,8 +218,10 @@ $(document).ready(function(){
      <button class='notif'>Notification</button>
                           <div class="noti-form" style="display:none">  
                     <input type="text" placeholder="Add Notification" id="Notification">
-                  <button id="Fnotify">Add</button>
-              
+                  <button onclick="Fnotify()">Add</button>
+                              <script>
+                              
+                              </script>
 </div>
             </div>
         </div> 
