@@ -18,10 +18,9 @@ if (!isset($_SESSION['adminid'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="../css/Dashboard.css">
-    <link rel="stylesheet" type="text/css" href="header.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <script src="index.js"></script>
+    
     <script src="../js/Dashboard.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
@@ -219,9 +218,42 @@ $(document).ready(function(){
                           <div class="noti-form" style="display:none">  
                     <input type="text" placeholder="Add Notification" id="Notification">
                   <button onclick="Fnotify()">Add</button>
+                  <div id="results">
+                      <p id="mynotic"></p>
+                  </div>
                               <script>
-                              
+                              function Fnotify(){
+                               let notic =document.getElementById('Notification');
+let xhttp=new XMLHttpRequest();
+xhttp.open('POST','server/notic.php');
+xhttp.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+data="data="+JSON.stringify({"data":notic.value});
+
+xhttp.onreadystatechange=function(){
+    if(this.readyState==4&&this.status==200){
+let jsondata=this.response;
+jsondata=JSON.parse(jsondata);
+
+console.log((jsondata[0].notic));
+let out=document.getElementById('mynotic');
+
+for(i in jsondata){
+
+    $(out).append(jsondata[i].notic+"<br>");
+}
+
+
+
+
+}
+}
+
+xhttp.send(data);
+
+}
                               </script>
+
+
 </div>
             </div>
         </div> 
