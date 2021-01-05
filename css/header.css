@@ -1,0 +1,16 @@
+body {
+    background-image: url('images/background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.header {
+    width: 85%;
+    height: 180px;
+    margin: auto;
+
+}
+
+.header h1 {
+    color: #546546;
+}

@@ -1,0 +1,55 @@
+  body {font-family: Arial, Helvetica, sans-serif;}
+  .container-fluid{
+
+    width: 100%;
+    
+  }
+  .Student_login{
+     background-color: #ffffffcc;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 80%;
+  padding: 20px;
+  }
+  input[type=text], input[type=password] {
+  width: 90%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  background:transparent;
+  color: #ff8500;
+  background-color: transparent;
+    border-top: transparent;
+    border-right: transparent;
+    border-left: transparent;
+    border-bottom: 1px solid brown;
+
+}
+
+ input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+ input[type=submit]:hover {
+  opacity: 0.8;
+
+}
+ input[type=submit]:active {
+  background:transparent;
+  
+}
+.col-sm-4{
+	 background-color: #ffffffcc;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  
+  padding: 20px;
+}
