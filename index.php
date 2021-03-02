@@ -77,5 +77,7 @@ echo"<script>alert ('";echo$msg;echo "')</script>";
 
 </body>
 <footer>
+
+    <center><h1 style="color: rgb(29, 88, 59);">AjAyDeveloper</h1></h1></center>
 </footer>
 </html>
