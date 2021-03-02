@@ -1,6 +1,7 @@
 <?php  
 include '../../server/conn.php'; 
 if(isset($_POST['data'])){
+    
     $arr=array();
 $arr=json_decode($_POST['data']);
 
@@ -12,8 +13,9 @@ $notic =$arr->data;
 
 // // $check=mysqli_query($connect,"SELECT * FROM `notification` WHERE notic='{$notic}'");
 // INSERT INTO admin (adminname) VALUES ('{$adminname}'')"
-$sql="INSERT INTO notification (notic) VALUES ('{$notic}')";
+$sql="INSERT INTO notification (notic) VALUES ('{$notic}')" or die("sql error");
 mysqli_query($connect,$sql);
+
 }
 
 function getnotic($connect)
