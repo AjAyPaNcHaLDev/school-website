@@ -36,7 +36,7 @@ echo"<script>alert ('";echo$msg;echo "')</script>";
 ?>
 
 <div class="header" >
-<h3>〖ή𝑒w〗𝕊h🅸𝓿คl🅸k HᎥ🅶ђﾂ sc𝖍๏๏ℓ</h3>
+<h1><?php echo $school_name; ?></h1>
 
 <nav class="navbar navbar-inverse">
 <div class="container-fluid">
